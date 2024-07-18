@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://fantastic-gingersnap-991acd.netlify.app/",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
