@@ -12,7 +12,7 @@ export const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://spontaneous-pithivier-8310ea.netlify.app/",
     method: ["GET", "DELETE", "POST", "PUT"],
     credentials: true,
   },
@@ -112,7 +112,7 @@ io.on("connection", (socket) => {
       msgByUserId: data?.msgByUserId,
     });
 
-     const saveMessage = await message.save();
+    const saveMessage = await message.save();
     // console.log("new message", data);
     // console.log("converse", conversation);
 
@@ -195,14 +195,11 @@ io.on("connection", (socket) => {
       }
     );
 
-     const conversationSender = await getCommentUser(socket.userId);
-     const conversationReceiver = await getCommentUser(msgByUserId);
+    const conversationSender = await getCommentUser(socket.userId);
+    const conversationReceiver = await getCommentUser(msgByUserId);
 
-     io.to(socket.userId).emit("currentUserConversation", conversationSender);
-     io.to(msgByUserId).emit(
-       "currentUserConversation",
-       conversationReceiver
-     );
+    io.to(socket.userId).emit("currentUserConversation", conversationSender);
+    io.to(msgByUserId).emit("currentUserConversation", conversationReceiver);
   });
 
   socket.on("disconnect", () => {
