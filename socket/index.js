@@ -12,7 +12,7 @@ export const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://wondrous-mooncake-1af30f.netlify.app",
+    origin: "https://cheerful-torte-a00401.netlify.app",
     method: ["GET", "DELETE", "POST", "PUT"],
     credentials: true,
   },

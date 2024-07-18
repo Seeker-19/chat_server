@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://wondrous-mooncake-1af30f.netlify.app",
+    origin: "https://cheerful-torte-a00401.netlify.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
