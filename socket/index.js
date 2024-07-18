@@ -12,7 +12,7 @@ export const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://spontaneous-pithivier-8310ea.netlify.app/",
+    origin: "https://spontaneous-pithivier-8310ea.netlify.app",
     method: ["GET", "DELETE", "POST", "PUT"],
     credentials: true,
   },

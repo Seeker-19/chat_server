@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://spontaneous-pithivier-8310ea.netlify.app/",
+    origin: "https://spontaneous-pithivier-8310ea.netlify.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
