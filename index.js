@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://cheerful-torte-a00401.netlify.app",
+    origin: "https://chatapp-snowy-iota.vercel.app/",
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
